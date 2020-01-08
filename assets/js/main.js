@@ -41,3 +41,31 @@ form2.addEventListener('submit', e => {
     })
   }
 })
+
+const form3 = document.forms['formContact']
+form3.addEventListener('submit', e => {
+  e.preventDefault();
+  $('#exampleModalCenter').modal('toggle');
+  if(!alreadyDone){
+    document.getElementById('modal_loader').classList.remove("d-none");
+    fetch(scriptURL, { method: 'POST', body: new FormData(form3)})
+    .then(response => {
+      document.getElementById('modal_loader').classList.add("d-none");
+      document.getElementById('modal_success').classList.remove("d-none");
+      alreadyDone = true;
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      document.getElementById('modal_loader').classList.add("d-none");
+      document.getElementById('modal_error').classList.remove("d-none");
+    })
+  }
+})
+
+
+
+
+
+setTimeout(function(){
+  $('.toast').toast('show');
+}, 2000);

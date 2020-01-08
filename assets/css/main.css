@@ -1578,3 +1578,38 @@ svg {
     stroke-dashoffset: 0;
   }
 }
+
+/*
+---------------------------------------------
+Toast
+---------------------------------------------
+*/
+
+.toast {
+  border:none;
+  border-radius: 8px;
+  margin-right: 20px;
+  z-index: 999;
+}
+
+.toast .toast-header {
+  background-color: #4d83fe;
+  color: white;
+  font-size: 1.1em;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.toast .toast-header i {
+  font-size: 1.3em;
+}
+
+.toast .toast-header span {
+  text-shadow: none;
+}
+
+
+.toast .toast-body em {
+  font-weight: bold;
+  font-style: normal;
+}
