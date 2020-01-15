@@ -62,8 +62,55 @@ form3.addEventListener('submit', e => {
   }
 })
 
+let offre = 0;
+let duree = 0;
+let price = "";
+
+function updatePrice (){
+  if(offre === 0 && duree === 0) {
+    price = 999;
+  } else if (offre === 1 && duree === 1) {
+    price = 2999;
+  } else {
+    price = 1699;
+  }
+  document.getElementById("priceToUpdate").innerHTML = price;
+}
 
 
+var el = document.querySelector('.odometer');
+
+od = new Odometer({
+  el: el,
+  value: 999,
+  duration: 500,
+  format: '( ddd)'
+});
+
+
+document.getElementById("switch1Input").onclick = function(e) {
+  let els = document.querySelectorAll("#switch1 p");
+  els[0].classList.toggle("textChecked");
+  els[1].classList.toggle("textChecked");
+  if(offre === 0) {
+    offre = 1;
+  } else {
+    offre = 0;
+  }
+  updatePrice();
+};
+
+document.getElementById("switch2Input").onclick = function(e) {
+  let els = document.querySelectorAll("#switch2 p");
+  els[0].classList.toggle("textChecked");
+  els[1].classList.toggle("textChecked");
+  if(duree === 0) {
+    duree = 1;
+  } else {
+    duree = 0;
+  }
+  updatePrice();
+};
 
 
 setTimeout(function(){

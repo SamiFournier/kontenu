@@ -20,6 +20,8 @@
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
+
 </head>
 
 <body>
@@ -242,7 +244,7 @@
             </div>
         </div>
         <div class="row justify-content-around">
-          <!-- Free Tier -->
+          <!-- BASIC Tier -->
           <div class="col-lg-5 mb-5" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
             <div class="card mb-5 mb-lg-0 h-100">
               <div class="card-body text-center">
@@ -292,7 +294,25 @@
             <div class="card mb-5 mb-lg-0 h-100">
               <div class="card-body text-center">
                 <h5 class="card-title text-uppercase text-center">PACK STRATÉGIE</h5>
-                <h6 class="card-price text-center">1 200€<span class="period"></span></h6>
+                <h6 class="card-price text-center"><span id="priceToUpdate" class="odometer"></span> €</h6>
+                <div class="switchs d-flex flex-wrap">
+                  <div class="switchContainer d-flex justify-content-center align-items-center col-12 col-lg-6" id="switch1">
+                    <p class="textG textChecked">BASIC</p>
+                    <label class="switch-wrap switch1">
+                      <input id="switch1Input" type="checkbox" />
+                      <div class="switch"></div>
+                    </label>
+                    <p class="textD">PREMIUM</p>
+                  </div>
+                  <div class="switchContainer d-flex justify-content-center align-items-center col-12 col-lg-6" id="switch2">
+                    <p class="textG textChecked">6 mois</p>
+                    <label class="switch-wrap switch1">
+                      <input id="switch2Input" type="checkbox" />
+                      <div class="switch"></div>
+                    </label>
+                    <p class="textD">12 mois</p>
+                  </div>
+                </div>
                 <hr>
                 <ul>
                   <li>
@@ -307,8 +327,6 @@
                     </p>
                   </li>
                 </ul>
-
-              </div>
             </div>
           </div>
         </div>
@@ -606,6 +624,8 @@
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/odometer.js"></script>
+
 
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>

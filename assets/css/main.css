@@ -908,6 +908,57 @@ section.pricing {
   }
 }
 
+/* Switch */
+.switchContainer p {
+  margin: 30px 20px 30px 20px;
+  opacity: 0.5;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.switch-wrap {
+  cursor: pointer;
+  background: #15273b;
+  padding: 5px;
+  width: 60px;
+  height: 35px;
+  border-radius: 17px;
+  margin: 0;
+}
+.switch-wrap  input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: .2s;
+}
+.switch::after {
+  content: '';
+  border-radius: 50%;
+  background: #fba70b;
+  grid-column: 2;
+  transition: background .2s;
+}
+
+p.textChecked {
+  color: #fba70b;
+  opacity: 1;
+  /* font-weight: bold; */
+}
+
+input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+input:checked + .switch::after {
+  /* background-color: #52cf71; */
+}
+
+
 /*
 --------------------------------------------
 howItWorks
