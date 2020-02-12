@@ -1,10 +1,12 @@
-const scriptURL = 'https://hooks.zapier.com/hooks/catch/5385899/otlarqc/'
+const scriptURL = 'https://hooks.zapier.com/hooks/catch/5385899/otlarqc/';
+const scriptURLPhone = "https://hooks.zapier.com/hooks/catch/5385899/odla7o9/";
 let alreadyDone = false;
+let alreadyDonePhone = false;
 
 const form1 = document.forms['formHeader']
 form1.addEventListener('submit', e => {
   e.preventDefault();
-  $('#exampleModalCenter').modal('toggle');
+  $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
     document.getElementById('modal_loader').classList.remove("d-none");
     fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
@@ -25,7 +27,7 @@ form1.addEventListener('submit', e => {
 const form2 = document.forms['formPrice']
 form2.addEventListener('submit', e => {
   e.preventDefault();
-  $('#exampleModalCenter').modal('toggle');
+  $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
     document.getElementById('modal_loader').classList.remove("d-none");
     fetch(scriptURL, { method: 'POST', body: new FormData(form2)})
@@ -45,7 +47,7 @@ form2.addEventListener('submit', e => {
 const form3 = document.forms['formContact']
 form3.addEventListener('submit', e => {
   e.preventDefault();
-  $('#exampleModalCenter').modal('toggle');
+  $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
     document.getElementById('modal_loader').classList.remove("d-none");
     fetch(scriptURL, { method: 'POST', body: new FormData(form3)})
@@ -116,3 +118,29 @@ document.getElementById("switch2Input").onclick = function(e) {
 setTimeout(function(){
   $('.toast').toast('show');
 }, 2000);
+
+
+$('.toast').on( "click", function() {
+   $('#ModalPhone').modal('show');
+});
+
+const form4 = document.forms['formPhone']
+form4.addEventListener('submit', e => {
+  e.preventDefault();
+  $('#ModalPhone').modal('toggle');
+  $('#ModalPhone_validation').modal('toggle');
+  if(!alreadyDonePhone){
+    document.getElementById('modal_success_phone').classList.remove("d-none");
+    fetch(scriptURLPhone, { method: 'POST', body: new FormData(form4)})
+    .then(response => {
+      document.getElementById('modal_loader_phone').classList.add("d-none");
+      document.getElementById('modal_success_phone').classList.remove("d-none");
+      alreadyDonePhone = true;
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      document.getElementById('modal_loader_phone').classList.add("d-none");
+      document.getElementById('modal_error_phone').classList.remove("d-none");
+    })
+  }
+})

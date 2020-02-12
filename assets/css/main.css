@@ -1491,6 +1491,10 @@ forms
   font-size: 16px;
 }
 
+.modal-body{
+  min-height: 150px;
+}
+
 #modal_loader {
   height: 300px;
 }
@@ -1503,6 +1507,7 @@ forms
 .spinner {
   position: relative;
 }
+
 .spinner:before, .spinner:after {
   content: "";
   position: relative;
@@ -1589,6 +1594,11 @@ forms
   }
 }
 
+.modalGifValidation {
+  width: 100%;
+  height: auto;
+}
+
 /* Animation error */
 
 svg {
@@ -1638,9 +1648,13 @@ Toast
 
 .toast {
   border:none;
-  border-radius: 8px;
+  border-radius: 50%;
   margin-right: 20px;
   z-index: 999;
+  height: 85px;
+  width: 85px;
+  border: 2px solid white;
+  box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 .toast .toast-header {
@@ -1650,18 +1664,48 @@ Toast
   font-size: 1.1em;
   padding: 15px;
   font-weight: normal;
+
 }
 
 .toast .toast-header i {
-  font-size: 1.3em;
+  font-size: 3.5em;
 }
 
 .toast .toast-header span {
   text-shadow: none;
 }
 
+.btnPhone {
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #fba70b;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.btnPhone:hover{
+  background-color: #f1556a;
+}
 
-.toast .toast-body em {
-  font-weight: bold;
-  font-style: normal;
+.inputPhone {
+  width: 80%;
+  font-size: 16px;
+  display: inline-block;
+  /* border-radius: 22px 0 0 22px; */
+  border-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 10px 0 10px 16px;
+  /* border-width: 0; */
+  /* box-shadow: rgba(251, 167, 11, 0.3) 0px 15px 30px 0px; */
+}
+
+.inputPhone:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(251, 167, 11, 0.5);
 }
