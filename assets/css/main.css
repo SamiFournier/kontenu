@@ -1655,6 +1655,13 @@ Toast
   width: 85px;
   border: 2px solid white;
   box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.4);
+  animation: 10s linear 15s infinite bounce;
+}
+
+@keyframes bounce {
+    0%, 2%, 5%, 8%, 10%, 100% {transform: translateY(0);}
+    4% {transform: translateY(-30px);}
+    6% {transform: translateY(-20px);}
 }
 
 .toast .toast-header {
