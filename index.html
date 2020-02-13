@@ -14,7 +14,7 @@
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+    <script src="https://kit.fontawesome.com/0e7f1a23e3.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/css/main.css">
 
@@ -94,9 +94,9 @@
                           <input class="inputInline" type="email" name="email" placeholder="camille@societe.fr" required>
                           <button class="btnInline" type="submit">C'est parti !</button>
                           <div class="row">
-                            <p class="formP col-4"><i class="fa fa-check-circle"></i> Démarrage de la mission en 24h</p>
-                            <p class="formP col-4"><i class="fa fa-check-circle"></i> Sans engagement</p>
-                            <p class="formP col-4"><i class="fa fa-check-circle"></i> Satisfait ou remboursé</p>
+                            <p class="formP col-4"><i class="fas fa-check-circle"></i> Démarrage de la mission en 24h</p>
+                            <p class="formP col-4"><i class="fas fa-check-circle"></i> Sans engagement</p>
+                            <p class="formP col-4"><i class="fas fa-check-circle"></i> Satisfait ou remboursé</p>
                           </div>
                         </form>
                     </div>
@@ -356,9 +356,9 @@
               <button class="btnInline" type="submit">C'est parti !</button>
             </div>
             <div class="row">
-              <p class="formP col-4"><i class="fa fa-check-circle"></i> Démarrage de la mission en 24h</p>
-              <p class="formP col-4"><i class="fa fa-check-circle"></i> Sans engagement</p>
-              <p class="formP col-4"><i class="fa fa-check-circle"></i> Satisfait ou remboursé</p>
+              <p class="formP col-4"><i class="fas fa-check-circle"></i> Démarrage de la mission en 24h</p>
+              <p class="formP col-4"><i class="fas fa-check-circle"></i> Sans engagement</p>
+              <p class="formP col-4"><i class="fas fa-check-circle"></i> Satisfait ou remboursé</p>
             </div>
           </form>
         </div>
@@ -556,9 +556,9 @@
                           <button class="btnInline" type="submit">C'est parti !</button>
                         </div>
                         <div class="row right-content">
-                          <p class="formP col-4"><i class="fa fa-check-circle"></i> Démarrage de la mission en 24h</p>
-                          <p class="formP col-4"><i class="fa fa-check-circle"></i> Sans engagement</p>
-                          <p class="formP col-4"><i class="fa fa-check-circle"></i> Satisfait ou remboursé</p>
+                          <p class="formP col-4"><i class="fas fa-check-circle"></i> Démarrage de la mission en 24h</p>
+                          <p class="formP col-4"><i class="fas fa-check-circle"></i> Sans engagement</p>
+                          <p class="formP col-4"><i class="fas fa-check-circle"></i> Satisfait ou remboursé</p>
                         </div>
                       </form>
                     </div>
@@ -620,8 +620,8 @@
             </div>
             <div id="modal_success_phone"class="justify-content-center align-items-center d-none">
               <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
-              <h4 class="text-center">Merci pour votre confiance !</h4>
-              <p class="text-center">Nous vous rappellons dans la journée.</p>
+              <h4 class="text-center">Merci pour votre confiance.</h4>
+              <p class="text-center">Nous vous rappellons dans la journée !</p>
               <!-- <div class="p-4">
                 <img src="assets/images/phone.gif" alt="phone busy gif" class="modalGifValidation">
               </div> -->
@@ -643,30 +643,30 @@
     <!-- Notification -->
     <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" style="position: fixed; bottom: 0; right: 0;" data-autohide="false">
       <div class="toast-header justify-content-center">
-        <div class=""><i class="fa fa-phone"></i></div>
+        <div class=""><i class="fas fa-phone"></i></div>
       </div>
     </div>
 
     <div class="modal fade" id="ModalPhone" tabindex="-1" role="dialog" aria-labelledby="ModalPhoneTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="dialog">
-        <div class="modal-content">
+        <div class="modal-content pr-4 pl-4">
           <!-- <div class="modal-header">
           </div> -->
-          <div class="modal-body">
-            <div class="d-flex justify-content-between">
-              <h5 class="modal-title mb-5" id="exampleModalLongTitle">Vous souhaitez être rappelé ?</h5>
-              <button type="button" class="close align-self-start" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <form class="formPhone d-flex flex-column" action="index.html" method="post" name="formPhone">
-              <input class="inputPhone align-self-center" type="text" name="name" placeholder="Camille Machin" autofocus>
-              <input class="inputPhone align-self-center" type="tel" name="tel" pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
+          <div class="modal-body d-flex flex-column">
+            <button type="button" class="close align-self-end" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title mb-5 align-self-center text-center mt-3" id="exampleModalLongTitle">Vous souhaitez être rappelé gratuitement ?</h5>
+            <p class="text-center">Notre équipe vous recontacte pour échanger avec vous sur vos besoins et vous présenter plus en détail notre offre.</p>
+            <form class="formPhone d-flex flex-column mt-5" action="index.html" method="post" name="formPhone">
+              <input class="inputPhone align-self-center" type="tel" name="tel" placeholder="Entrez votre numéro de téléphone"pattern="^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" required>
               <div class="d-flex flex-column mt-3">
                 <button type="submit" class="btn btnPhone align-self-end">C'est parti !</button>
               </div>
             </form>
+            <div class="row right-content">
+              <p class="formP col-12 mt-4 text-center" id="phoneMarketing"><i class="fas fa-user-shield"></i> Votre numéro de téléphone ne sera pas revendu pour de la prospection commerciale</p>
+            </div>
           </div>
           <!-- <div class="modal-footer">
           </div> -->

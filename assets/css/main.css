@@ -1675,7 +1675,7 @@ Toast
 }
 
 .toast .toast-header i {
-  font-size: 3.5em;
+  font-size: 3.3em;
 }
 
 .toast .toast-header span {
@@ -1715,4 +1715,8 @@ Toast
 .inputPhone:focus {
   outline: none;
   border-bottom: 1px solid rgba(251, 167, 11, 0.5);
+}
+
+#phoneMarketing {
+  font-size: 12px;
 }
