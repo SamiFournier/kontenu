@@ -1666,7 +1666,7 @@ Toast
 
 .toast .toast-header {
   /* background-color: #4d83fe; */
-  background: linear-gradient(0.35turn, #f47d43, #f1556a);
+  background: #fba70b;
   color: white;
   font-size: 1.1em;
   padding: 15px;
