@@ -1,5 +1,5 @@
-const scriptURL = 'https://hooks.zapier.com/hooks/catch/5385899/otlarqc/';
-const scriptURLPhone = "https://hooks.zapier.com/hooks/catch/5385899/odla7o9/";
+const scriptURLToComplete = "https://api.trello.com/1/cards?key=29322ddfa30cc8586d250455ddfebc0b&token=36365e062dba8a689e62e9e64fd36709c2ab140b878155172027ccd47d330315&idList=5f5a2b75cd7e0e4059f23b74&name=";
+const scriptURLPhoneToComplete = "https://api.trello.com/1/cards?key=29322ddfa30cc8586d250455ddfebc0b&token=36365e062dba8a689e62e9e64fd36709c2ab140b878155172027ccd47d330315&idList=5f5a2b727ec01d7da278fe0b&name=";
 let alreadyDone = false;
 let alreadyDonePhone = false;
 
@@ -8,8 +8,11 @@ form1.addEventListener('submit', e => {
   e.preventDefault();
   $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
+    var mailToConcate = $('.inputInline').val();
+    console.log(mailToConcate);
+    var scriptURL = scriptURLToComplete.concat(mailToConcate);
     document.getElementById('modal_loader').classList.remove("d-none");
-    fetch(scriptURL, { method: 'POST', body: new FormData(form1)})
+    fetch(scriptURL, { method: 'POST'})
     .then(response => {
       document.getElementById('modal_loader').classList.add("d-none");
       document.getElementById('modal_success').classList.remove("d-none");
@@ -29,8 +32,11 @@ form2.addEventListener('submit', e => {
   e.preventDefault();
   $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
+    var mailToConcate = $('.inputInline').val();
+    console.log(mailToConcate);
+    var scriptURL = scriptURLToComplete.concat(mailToConcate);
     document.getElementById('modal_loader').classList.remove("d-none");
-    fetch(scriptURL, { method: 'POST', body: new FormData(form2)})
+    fetch(scriptURL, { method: 'POST' })
     .then(response => {
       document.getElementById('modal_loader').classList.add("d-none");
       document.getElementById('modal_success').classList.remove("d-none");
@@ -49,8 +55,11 @@ form3.addEventListener('submit', e => {
   e.preventDefault();
   $('#ModalInscription').modal('toggle');
   if(!alreadyDone){
+    var mailToConcate = $('.inputInline').val();
+    console.log(mailToConcate);
+    var scriptURL = scriptURLToComplete.concat(mailToConcate);
     document.getElementById('modal_loader').classList.remove("d-none");
-    fetch(scriptURL, { method: 'POST', body: new FormData(form3)})
+    fetch(scriptURL, { method: 'POST'})
     .then(response => {
       document.getElementById('modal_loader').classList.add("d-none");
       document.getElementById('modal_success').classList.remove("d-none");
@@ -130,8 +139,11 @@ form4.addEventListener('submit', e => {
   $('#ModalPhone').modal('toggle');
   $('#ModalPhone_validation').modal('toggle');
   if(!alreadyDonePhone){
+    var phoneToConcate= $('.inputPhone').val();
+    var scriptURLPhone = scriptURLPhoneToComplete.concat(phoneToConcate);
+    console.log(scriptURLPhone);
     document.getElementById('modal_success_phone').classList.remove("d-none");
-    fetch(scriptURLPhone, { method: 'POST', body: new FormData(form4)})
+    fetch(scriptURLPhone, { method: 'POST'})
     .then(response => {
       document.getElementById('modal_loader_phone').classList.add("d-none");
       document.getElementById('modal_success_phone').classList.remove("d-none");
